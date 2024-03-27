@@ -10,10 +10,7 @@
     width: 100%;
     height: 5%;
 
-    /* text-align: center; */
-    align-items: center;
-    display: flex;
-    justify-content: center;
+    text-align: center;
 
 
     padding-top: 3rem;
@@ -27,7 +24,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background: red; */
+
 
 }
 
@@ -56,8 +53,10 @@
     height: 5%;
 
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+
+    padding: 10px 0;
+    text-align: left;
 }
 
 
@@ -110,6 +109,9 @@
     width: 80%;
     height: 80%;
 
+    display: flex;
+    justify-content: center;
+
 
 }
 
@@ -119,10 +121,16 @@ button {
     cursor: pointer;
     border: 1px solid black;
     margin: 0 10px;
-    padding: 0 10px;
+    padding: 0 15px;
 
-    background: #0D74CE;
+
+    background: #00437d;
     color: white;
+    transition: all 300ms ease-in-out;
+}
+
+button:hover {
+    background: #0D74CE;
 }
 
 
@@ -130,4 +138,9 @@ button {
     width: 100%;
     height: 10%;
     text-align: center;
+}
+
+.canvas-main {
+    position: absolute;
+
 }
