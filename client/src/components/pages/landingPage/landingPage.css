@@ -6,7 +6,7 @@
 
 }
 
-.header{
+.header {
     width: 100%;
     height: 5%;
 
@@ -38,7 +38,8 @@
 
 }
 
-.input-url {
+.browse-search input {
+
     width: 800px;
 }
 
@@ -60,26 +61,73 @@
 }
 
 
-.bottom{
+.bottom {
     width: 100%;
     height: 60%;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    gap: 20px;
 }
 
 
-.video-container {
-    width: 60%;
+.image-container {
+    width: 40%;
     height: 90%;
 
-    margin: 5% 0;
-    background: black;
-
-
+    align-items: center;
     display: flex;
     justify-content: center;
 
+    border: 1px solid black;
+    border-radius: 20px;
+}
 
+.video-container {
+    border: 1px solid black;
+    border-radius: 20px;
+
+
+
+    position: relative;
+    width: 50%;
+    height: 90%;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+
+.video-container video {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+
+
+}
+
+
+button {
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid black;
+    margin: 0 10px;
+    padding: 0 10px;
+
+    background: #0D74CE;
+    color: white;
+}
+
+
+.footer {
+    width: 100%;
+    height: 10%;
+    text-align: center;
 }
