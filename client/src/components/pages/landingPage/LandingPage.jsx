@@ -111,7 +111,7 @@ const LandingPage = () => {
                         <input className='input-url' type="text" />
                     </div>
                     <div className="browse-div">
-                        <button className="btn-browse">Browse</button>
+                        <input type="file"  id="imageUpload"  />
                     </div>
                 </div>
             </div>
