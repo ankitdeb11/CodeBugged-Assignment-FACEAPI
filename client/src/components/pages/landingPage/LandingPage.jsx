@@ -39,29 +39,16 @@ const LandingPage = () => {
 
 
 
-
-
-    const handleVideoOnePlay = () => {
+    const handleVideoOnPlay = () => {
         setInterval(async () => {
             if (initializing) {
                 setInitializing(false);
             }
 
-            console.log('Before detection');
-            console.log('Video element:', videoRef.current);
+            const detections = await faceapi.detectAllFaces(videoRef.current, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions();
 
-            if (!videoRef.current) {
-                console.error('Video element not found');
-                return;
-            }
+            console.log(detections);
 
-            try {
-                const detections = await faceapi.detectAllFaces(videoRef.current, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions();
-
-                console.log('Detections:', detections);
-            } catch (error) {
-                console.error('Error detecting faces:', error);
-            }
         }, 100);
     }
 
@@ -112,7 +99,7 @@ const LandingPage = () => {
                 </div>
                 <div className="video-container">
 
-                    <video ref={videoRef} autoPlay muted height={videoHeight} width={videoWidth} onPlay={handleVideoOnePlay} />
+                    <video ref={videoRef} autoPlay muted height={videoHeight} width={videoWidth} onPlay={handleVideoOnPlay} />
                     <canvas ref={canvasRef} />
                 </div>
             </div>
