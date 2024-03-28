@@ -10,6 +10,8 @@ const LandingPage = () => {
     const [detecting, setDetecting] = useState(false);
     const [intervalId, setIntervalId] = useState(null); // tracking interval ID for clearing
 
+
+    //my Refs
     const videoRef = useRef();
     const canvasRef = useRef();
     const videoWidth = 614;
@@ -65,7 +67,9 @@ const LandingPage = () => {
                     canvasRef.current.getContext('2d').clearRect(0, 0, videoWidth, videoHeight);
                 }
 
+                
                 //drawing canvas for detections on the face
+             
                 faceapi.draw.drawDetections(canvasRef.current, resizeDetections);
                 faceapi.draw.drawFaceLandmarks(canvasRef.current, resizeDetections);
                 faceapi.draw.drawFaceExpressions(canvasRef.current, resizeDetections);
